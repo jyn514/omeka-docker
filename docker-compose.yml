@@ -11,13 +11,6 @@ services:
       MYSQL_USER: omeka
       MYSQL_PASSWORD: omeka
 
-  db_admin:
-    image: phpmyadmin/phpmyadmin
-    depends_on:
-     - db
-    ports:
-      - "8080:80"
-
   omeka:
     depends_on:
       - db
