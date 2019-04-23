@@ -17,6 +17,8 @@ services:
     depends_on:
       - db
     build: ./
+    volumes:
+      - "./files_site10:/var/www/html/files"
     ports:
       - "8001:80"
     restart: always
