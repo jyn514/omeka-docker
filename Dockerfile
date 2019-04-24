@@ -39,6 +39,7 @@ RUN unzip -q /var/www/omeka.zip -d /var/www/ \
 
 COPY ./db.ini /var/www/html/db.ini
 COPY ./.htaccess /var/www/html/.htaccess
+RUN { echo upload_max_filesize = 100M; echo post_max_size = 100M; } > php.ini
 
 VOLUME /var/www/html/files
 USER root
