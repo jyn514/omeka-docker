@@ -18,7 +18,7 @@ services:
       - db
     build: ./
     volumes:
-      - "./files_site10:/var/www/html/files"
+      - "./files_site1:/var/www/html/files"
     ports:
       - "8001:80"
     restart: always
